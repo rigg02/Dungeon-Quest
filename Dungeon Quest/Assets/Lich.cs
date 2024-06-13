@@ -33,6 +33,7 @@ public class Lich : MonoBehaviour
     }
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("BossSpawn");
         coroutine = Teleporter();
         StartCoroutine(coroutine);
     }
@@ -126,6 +127,7 @@ public class Lich : MonoBehaviour
     }
     public void ScytheShoot()
     {
+        FindObjectOfType<AudioManager>().Play("BossScytheThrow");
         anim.ResetTrigger("LichScythe");
         GameObject scythe = Instantiate(Scythe, transform.position, Quaternion.identity);
         tar = target.position;
@@ -133,11 +135,13 @@ public class Lich : MonoBehaviour
     }
     public void Summon()
     {
+        FindObjectOfType<AudioManager>().Play("BossSummon");
         anim.ResetTrigger("LichSummon");
         Instantiate(Ghost, Spawner.transform.position, Quaternion.identity);
     }
     public void Melee()
     {
+        FindObjectOfType<AudioManager>().Play("BossScythe");
         anim.ResetTrigger("LichMelee");
         if(!spriteRenderer.flipX)
         {
@@ -172,7 +176,9 @@ public class Lich : MonoBehaviour
     public void Die()
     {
         free = false;
+        FindObjectOfType<AudioManager>().Play("BossDie");
         Instantiate(Drop, transform.position, Quaternion.identity);
+        GameObject.FindWithTag("Player").GetComponent<RPlayer>().lichDied = true;
         Destroy(gameObject);
     }
     public void TakeDamage(int dam)

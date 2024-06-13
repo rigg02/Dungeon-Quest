@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 5
-  speed: 3
+  speed: 4
   rotspeed: 5
   damage: 20
 --- !u!60 &-4217814853301074635

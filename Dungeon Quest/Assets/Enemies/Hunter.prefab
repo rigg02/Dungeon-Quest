@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144865bf442903f4888e4e4fd7c1368b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   Bullet: {fileID: 4306573196928553787, guid: 32b5145c635431e4c9c90a52676320a6, type: 3}
   swordColliderLeft: {fileID: 8701912961859398078}
   swordColliderRight: {fileID: 810930810536357739}

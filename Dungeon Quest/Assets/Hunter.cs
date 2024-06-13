@@ -89,6 +89,7 @@ public class Hunter : MonoBehaviour
     }
     void Shoot()
     {
+        FindObjectOfType<AudioManager>().Play("HunterBow");
         Vector3 Look = transform.InverseTransformPoint(target.position);
         float angle = Mathf.Atan2(Look.y,Look.x)* Mathf.Rad2Deg;
         GameObject bull = Instantiate(Bullet, transform.position, Quaternion.Euler(0,0,angle));
@@ -99,7 +100,7 @@ public class Hunter : MonoBehaviour
     }
     public void AttackFinish()
     {
-        Debug.Log("yo");
+
         anim.SetBool("HunterMelee", false);
         swordColliderRight.enabled = false;
         swordColliderLeft.enabled = false;
@@ -117,6 +118,7 @@ public class Hunter : MonoBehaviour
     }
     public void Die()
     {
+        FindObjectOfType<AudioManager>().Play("EnemyDie");
         gameObject.transform.parent.gameObject.GetComponent<RoomBehaviour>().Dead();
         Instantiate(Drop, transform.position, Quaternion.identity);
         Destroy(gameObject);

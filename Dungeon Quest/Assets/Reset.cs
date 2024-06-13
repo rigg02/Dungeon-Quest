@@ -20,6 +20,7 @@ public class Reset : MonoBehaviour,IInteractable
     }
     public void Interact()
     {
+        FindObjectOfType<AudioManager>().Play("TrainingHall");
         for (int i = 0; i<Spawners.Length;i++) 
         {
             Instantiate(dummy, Spawners[i].gameObject.transform.position, Quaternion.identity);

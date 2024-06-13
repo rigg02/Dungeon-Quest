@@ -18,17 +18,14 @@ public class Bullet : MonoBehaviour
     }
     public void Init(Vector2 dir)
     {
-        rb.velocity = speed * dir;
+        dir.Normalize();
+        rb.velocity = dir * speed;
+        transform.Rotate(dir);
     }
     // Start is called before the first frame update
     void Start()
     {
         Invoke("destroyammo", lifetime);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public void destroyammo()
     {

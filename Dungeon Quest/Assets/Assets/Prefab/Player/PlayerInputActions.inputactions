@@ -931,7 +931,7 @@
                     "id": "7d7a9b57-2fdc-46ca-b02d-8a979ac01b69",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "initialStateCheck": false
                 },
                 {
@@ -977,6 +977,24 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Esc",
+                    "type": "Button",
+                    "id": "7428253b-d41b-416d-8159-dbacb5407c5c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TP",
+                    "type": "Button",
+                    "id": "b89a7879-9395-447e-9a98-9a930e1c2a50",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=3.5)",
                     "initialStateCheck": false
                 }
             ],
@@ -1171,7 +1189,7 @@
                 {
                     "name": "",
                     "id": "f2aa4812-9c52-4776-864b-17f4d0853f3e",
-                    "path": "<Gamepad>/leftShoulder",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad;Keyboard&Mouse",
@@ -1193,7 +1211,7 @@
                 {
                     "name": "",
                     "id": "baad81c5-e7fa-40db-82dc-0e4e7b881bb8",
-                    "path": "<Gamepad>/rightShoulder",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad;Keyboard&Mouse",
@@ -1220,6 +1238,50 @@
                     "processors": "",
                     "groups": "Gamepad;Keyboard&Mouse",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48c79b33-6726-4ca7-926a-ed0b4efabb74",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse;Gamepad",
+                    "action": "Esc",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "71c75ba8-2e0f-419e-bc00-430b6eff3aa8",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Keyboard&Mouse",
+                    "action": "Esc",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6e662b4e-ff9a-4f89-9ebe-1246ba1dcbb2",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Keyboard&Mouse",
+                    "action": "TP",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1984939e-ec8e-4080-93a1-5c6ad9cac85e",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Keyboard&Mouse",
+                    "action": "TP",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

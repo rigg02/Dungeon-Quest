@@ -35,8 +35,8 @@ Transform:
 --- !u!1 &2214800138576916210
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 9022034890110893339, guid: bb6fcd53809f78e45b025afef99df662, type: 3}
-  m_PrefabInstance: {fileID: 4521432137914156795}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -55,8 +55,8 @@ GameObject:
 --- !u!4 &381373677594568127
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4898278659083997930, guid: bb6fcd53809f78e45b025afef99df662, type: 3}
-  m_PrefabInstance: {fileID: 4521432137914156795}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2214800138576916210}
   serializedVersion: 2
@@ -70,8 +70,8 @@ Transform:
 --- !u!212 &2996231102383558894
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2728999346063879799, guid: bb6fcd53809f78e45b025afef99df662, type: 3}
-  m_PrefabInstance: {fileID: 4521432137914156795}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2214800138576916210}
   m_Enabled: 1
@@ -123,8 +123,8 @@ SpriteRenderer:
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6085032735819971118, guid: bb6fcd53809f78e45b025afef99df662, type: 3}
-  m_PrefabInstance: {fileID: 4521432137914156795}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2214800138576916210}
   m_Enabled: 1
@@ -143,8 +143,8 @@ Animator:
 --- !u!60 &4586659614465129060
 PolygonCollider2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6268990560886483853, guid: bb6fcd53809f78e45b025afef99df662, type: 3}
-  m_PrefabInstance: {fileID: 4521432137914156795}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2214800138576916210}
   m_Enabled: 1
@@ -196,8 +196,8 @@ PolygonCollider2D:
 --- !u!114 &9216532680360569055
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2222310473586609959, guid: bb6fcd53809f78e45b025afef99df662, type: 3}
-  m_PrefabInstance: {fileID: 4521432137914156795}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2214800138576916210}
   m_Enabled: 1
@@ -205,61 +205,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dc73db6c6896f429381592b2f47d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 20
---- !u!1001 &4521432137914156795
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8562735376974912885}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Name
-      value: Wizard Gold
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 0}
+  gold: 40

@@ -8,7 +8,7 @@ public class GoldDrop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<AudioManager>().Play("GoldDrop");
     }
 
     // Update is called once per frame

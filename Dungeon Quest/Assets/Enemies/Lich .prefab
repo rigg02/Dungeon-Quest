@@ -499,6 +499,7 @@ MonoBehaviour:
   - {fileID: 0}
   HealthBar: {fileID: 7940513309307548907}
   Drop: {fileID: 2464302439792278714, guid: 2c47a625d11bfbe4da1cf5fd7806d364, type: 3}
+  audioManager: {fileID: 6826235478622111956, guid: 9661ae96545efb44e9bbd260bbe1e355, type: 3}
 --- !u!114 &8913483189779459360
 MonoBehaviour:
   m_ObjectHideFlags: 0

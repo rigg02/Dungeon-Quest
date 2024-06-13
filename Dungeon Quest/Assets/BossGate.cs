@@ -33,6 +33,7 @@ public class BossGate : MonoBehaviour, IInteractable
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("BossDoor");
             Text.text = "";
             canEnter = false;
         }

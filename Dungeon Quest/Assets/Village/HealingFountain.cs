@@ -18,6 +18,9 @@ public class HealingFountain : MonoBehaviour,IInteractable
     }
     public void Interact()
     {
+        FindObjectOfType<AudioManager>().Play("HealingFountain");
+        Player = GameObject.FindWithTag("Player");
         Player.GetComponent<Health>().Increasehealth(500);
+        Player.GetComponent<RPlayer>().mana = Player.GetComponent<RPlayer>().Maxmana;
     }
 }

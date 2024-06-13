@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Shop : MonoBehaviour, IInteractable
+public class Shop : MonoBehaviour
 {
     public GameObject Canvas;
     public TextMeshProUGUI Message;
@@ -11,39 +11,43 @@ public class Shop : MonoBehaviour, IInteractable
     public TextMeshProUGUI[] Cost;
     public GameObject Spawner;
     public GameObject[] Item;
-    public int[] Gold;
-    public int[] OGGold;
-    public int[] Sold;
-    public GameObject Player;
-    public bool[] Limited;
-    public int[] Inventory;
-    public float[] increasePrice;
-    // Start is called before the first frame update
-    void Start()
+    public int[] Gold = new int[3];
+    public int[] OGGold = new int[3];
+    public int[] Sold = new int[3];
+    private GameObject Player;
+    public bool[] Limited = new bool[3];
+    public int[] Inventory = new int[3];
+    public float[] increasePrice = new float[3];
+
+    public void Activate()
     {
+        FindObjectOfType<AudioManager>().Play("ShopOpen");
+        Player = GameObject.FindWithTag("Player");
+        Cursor.visible = true;
+        Message.SetText("");
+        DisplayGold.SetText(Player.GetComponent<RPlayer>().gold + "");
+        Canvas.SetActive(true);
         for (int i = 0; i < Item.Length; i++)
         {
-            Sold[i] = 0;
-            OGGold[i] = Gold[i];
             Cost[i].SetText(Gold[i] + " Gold");
-        }
-    }
+            if (Limited[i] && Inventory[i] == 0)
+                Cost[i].SetText("Sold Out");
+            if (Limited[i] && Inventory[i] > 0)
+            {
+                Gold[i] = (int)(OGGold[i] + (float)(Sold[i] * ((increasePrice[i] / 100) * OGGold[i])));
+            }
 
-    // Update is called once per frame
-    void Update()
-    {
-        DisplayGold.SetText(Player.GetComponent<RPlayer>().gold + "");
-        
-    }
-    public void Interact()
-    {
-        Canvas.SetActive(true);
+        }
+        Player.GetComponent<RPlayer>().canDo = false;
         Time.timeScale = 0;
     }
     public void Exit()
     {
+        Player.GetComponent<RPlayer>().canDo = true;
         Canvas.SetActive(false);
+        Cursor.visible = false;
         Time.timeScale = 1;
+        GetComponent<Dialogue>().alreadyInteracting = false;
     }
     public void Item1()
     {
@@ -51,6 +55,8 @@ public class Shop : MonoBehaviour, IInteractable
         {
             if (Player.GetComponent<RPlayer>().gold >= Gold[0])
             {
+                FindObjectOfType<AudioManager>().Play("Buy");
+                Message.SetText("");
                 Player.GetComponent<RPlayer>().gold -= Gold[0];
                 Inventory[0]--;
                 Sold[0]++;
@@ -69,6 +75,8 @@ public class Shop : MonoBehaviour, IInteractable
         {
             if (Player.GetComponent<RPlayer>().gold >= Gold[0])
             {
+                FindObjectOfType<AudioManager>().Play("Buy");
+                Message.SetText("");
                 Player.GetComponent<RPlayer>().gold -= Gold[0];
                 Instantiate(Item[0], new Vector3(Spawner.transform.position.x + Random.Range(-.5f, .5f), Spawner.transform.position.y + Random.Range(-.5f, .5f), Spawner.transform.position.z), Quaternion.identity);
             }
@@ -78,15 +86,17 @@ public class Shop : MonoBehaviour, IInteractable
 
             }
         }
- 
+        DisplayGold.SetText(Player.GetComponent<RPlayer>().gold + "");
     }
     public void Item2()
     {
         if (Limited[1] && Inventory[1] > 0)
         {
-            if (Player.GetComponent<RPlayer>().gold >= Gold[0])
+            if (Player.GetComponent<RPlayer>().gold >= Gold[1])
             {
-                Player.GetComponent<RPlayer>().gold -= Gold[0];
+                FindObjectOfType<AudioManager>().Play("Buy");
+                Message.SetText("");
+                Player.GetComponent<RPlayer>().gold -= Gold[1];
                 Inventory[1]--;
                 Sold[1]++;
                 Gold[1] = (int)(OGGold[1] + (float)(Sold[1] * ((increasePrice[1] / 100) * OGGold[1])));
@@ -104,6 +114,8 @@ public class Shop : MonoBehaviour, IInteractable
         {
             if (Player.GetComponent<RPlayer>().gold >= Gold[1])
             {
+                FindObjectOfType<AudioManager>().Play("Buy");
+                Message.SetText("");
                 Player.GetComponent<RPlayer>().gold -= Gold[1];
                 Instantiate(Item[1], new Vector3(Spawner.transform.position.x + Random.Range(-.5f, .5f), Spawner.transform.position.y + Random.Range(-.5f, .5f), Spawner.transform.position.z), Quaternion.identity);
             }
@@ -112,6 +124,7 @@ public class Shop : MonoBehaviour, IInteractable
                 Message.SetText("Not enough Gold");
             }
         }
+        DisplayGold.SetText(Player.GetComponent<RPlayer>().gold + "");
     }
     public void Item3()
     {
@@ -119,6 +132,8 @@ public class Shop : MonoBehaviour, IInteractable
         {
             if (Player.GetComponent<RPlayer>().gold >= Gold[2])
             {
+                FindObjectOfType<AudioManager>().Play("Buy");
+                Message.SetText("");
                 Player.GetComponent<RPlayer>().gold -= Gold[2];
                 Inventory[2]--;
                 Sold[2]++;
@@ -137,6 +152,8 @@ public class Shop : MonoBehaviour, IInteractable
         {
             if (Player.GetComponent<RPlayer>().gold >= Gold[2])
             {
+                FindObjectOfType<AudioManager>().Play("Buy");
+                Message.SetText("");
                 Player.GetComponent<RPlayer>().gold -= Gold[2];
                 Instantiate(Item[2], new Vector3(Spawner.transform.position.x + Random.Range(-.5f,.5f), Spawner.transform.position.y + Random.Range(-.5f, .5f), Spawner.transform.position.z), Quaternion.identity);
             }
@@ -145,5 +162,6 @@ public class Shop : MonoBehaviour, IInteractable
                 Message.SetText("Not enough Gold");
             }
         }
+        DisplayGold.SetText(Player.GetComponent<RPlayer>().gold + "");
     }
 }

@@ -3,9 +3,13 @@ ScriptsOnlyBuild:
     Assembly-CSharp:
     - ThrowAttack
     Assembly-CSharp.dll:
+    - AudioManager
+    - BindingMenu
     - BossGate
     - BossRoom
     - Bullet
+    - Credits
+    - Dialogue
     - Dummy
     - Follower
     - FollowerBullet
@@ -18,7 +22,9 @@ ScriptsOnlyBuild:
     - HomingMissile
     - Hunter
     - Lich
+    - MainMenu
     - Moving_Turret
+    - Notes
     - RPlayer
     - Reset
     - RoomBehaviour
@@ -37,7 +43,6 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
-    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -98,7 +103,6 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
@@ -107,6 +111,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Slider
   serializedClasses:
+    Assembly-CSharp:
+    - Sound
     Cinemachine:
     - Cinemachine.CinemachineBlendDefinition
     - Cinemachine.CinemachineBrain/BrainEvent
@@ -119,9 +125,12 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.InputBinding
     - UnityEngine.InputSystem.InputControlScheme
     - UnityEngine.InputSystem.InputControlScheme/DeviceRequirement
+    - UnityEngine.InputSystem.InputSettings/iOSSettings
+    - UnityEngine.InputSystem.PlayerInput/ActionEvent
     - UnityEngine.InputSystem.PlayerInput/ControlsChangedEvent
     - UnityEngine.InputSystem.PlayerInput/DeviceLostEvent
     - UnityEngine.InputSystem.PlayerInput/DeviceRegainedEvent
+    - UnityEngine.InputSystem.iOS.PrivacyDataUsage
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
     - TMPro.FontAssetCreationSettings
@@ -158,11 +167,197 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: Shop
-    methodName: Item1
+    fullTypeName: BindingMenu
+    methodName: Back
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Next
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Previous
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Menu
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: deathContinue
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Binding
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Menu
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: SavePlayer
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Continue
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnAimPad
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnDash
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnSecondary_Fire
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnFire
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnLook
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnMove
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnHealUp
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnManaUp
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnInteract
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnEsc
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnTP
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Back
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: NewGame
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: Exit
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Previous
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: Bindings
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: LoadGame
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Next
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: Credits
+  - assembly: Assembly-CSharp
+    fullTypeName: Credits
+    methodName: OnCreditsEnd
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Back
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Next
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Previous
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Menu
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: deathContinue
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Binding
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Menu
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: SavePlayer
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Continue
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnAimPad
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnDash
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnSecondary_Fire
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnFire
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnLook
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnMove
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnHealUp
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnManaUp
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnInteract
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnEsc
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnTP
+  - assembly: Assembly-CSharp
+    fullTypeName: Dialogue
+    methodName: NextLine
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Item1
+  - assembly: Assembly-CSharp
+    fullTypeName: Dialogue
+    methodName: NextLine
+  - assembly: Assembly-CSharp
+    fullTypeName: Dialogue
+    methodName: NextLine
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Item1
+  - assembly: Assembly-CSharp
+    fullTypeName: Dialogue
+    methodName: NextLine
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Exit
+  - assembly: Assembly-CSharp
+    fullTypeName: Dialogue
+    methodName: NextLine
+  - assembly: Assembly-CSharp
+    fullTypeName: Dialogue
+    methodName: NextLine
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Item3
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Item2
+  - assembly: Assembly-CSharp
+    fullTypeName: Dialogue
+    methodName: NextLine
+  - assembly: Assembly-CSharp
+    fullTypeName: Dialogue
+    methodName: NextLine
+  - assembly: Assembly-CSharp
+    fullTypeName: Dialogue
+    methodName: NextLine
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Item3
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Exit
@@ -171,15 +366,6 @@ ScriptsOnlyBuild:
     methodName: Item3
   - assembly: Assembly-CSharp
     fullTypeName: Shop
-    methodName: Item2
-  - assembly: Assembly-CSharp
-    fullTypeName: Shop
-    methodName: Exit
-  - assembly: Assembly-CSharp
-    fullTypeName: Shop
-    methodName: Item3
-  - assembly: Assembly-CSharp
-    fullTypeName: Shop
     methodName: Exit
   - assembly: Assembly-CSharp
     fullTypeName: Shop
@@ -190,6 +376,69 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Item2
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Back
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Next
+  - assembly: Assembly-CSharp
+    fullTypeName: BindingMenu
+    methodName: Previous
+  - assembly: Assembly-CSharp
+    fullTypeName: Notes
+    methodName: Back
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Menu
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: deathContinue
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Binding
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Menu
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: SavePlayer
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: Continue
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnAimPad
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnDash
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnSecondary_Fire
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnFire
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnLook
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnMove
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnHealUp
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnManaUp
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnInteract
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnEsc
+  - assembly: Assembly-CSharp
+    fullTypeName: RPlayer
+    methodName: OnTP
   sceneClasses:
     Assets/Scenes/Diff Player.unity:
     - Class: 1
@@ -216,6 +465,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 91
@@ -225,82 +476,94 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 634}
+      Script: {instanceID: 638}
     - Class: 114
-      Script: {instanceID: 16612}
+      Script: {instanceID: 16618}
     - Class: 114
-      Script: {instanceID: 16672}
+      Script: {instanceID: 16678}
     - Class: 114
-      Script: {instanceID: 16676}
+      Script: {instanceID: 16682}
     - Class: 114
-      Script: {instanceID: 17560}
+      Script: {instanceID: 17566}
     - Class: 114
-      Script: {instanceID: 17662}
+      Script: {instanceID: 17668}
     - Class: 114
-      Script: {instanceID: 17678}
+      Script: {instanceID: 17684}
     - Class: 114
-      Script: {instanceID: 17892}
+      Script: {instanceID: 17902}
     - Class: 114
-      Script: {instanceID: 18014}
+      Script: {instanceID: 18026}
     - Class: 114
-      Script: {instanceID: 18096}
+      Script: {instanceID: 18108}
     - Class: 114
-      Script: {instanceID: 18186}
+      Script: {instanceID: 18200}
     - Class: 114
-      Script: {instanceID: 18318}
+      Script: {instanceID: 18332}
     - Class: 114
-      Script: {instanceID: 18370}
+      Script: {instanceID: 18386}
     - Class: 114
-      Script: {instanceID: 18382}
+      Script: {instanceID: 18398}
     - Class: 114
-      Script: {instanceID: 19114}
+      Script: {instanceID: 18780}
     - Class: 114
-      Script: {instanceID: 19336}
+      Script: {instanceID: 19130}
     - Class: 114
-      Script: {instanceID: 19344}
+      Script: {instanceID: 19354}
     - Class: 114
-      Script: {instanceID: 19418}
+      Script: {instanceID: 19362}
     - Class: 114
-      Script: {instanceID: 19642}
+      Script: {instanceID: 19436}
     - Class: 114
-      Script: {instanceID: 19868}
+      Script: {instanceID: 19662}
     - Class: 114
-      Script: {instanceID: 20090}
+      Script: {instanceID: 19888}
     - Class: 114
-      Script: {instanceID: 21164}
+      Script: {instanceID: 19926}
     - Class: 114
-      Script: {instanceID: 21172}
+      Script: {instanceID: 20112}
     - Class: 114
-      Script: {instanceID: 21510}
+      Script: {instanceID: 20944}
     - Class: 114
-      Script: {instanceID: 21558}
+      Script: {instanceID: 21190}
     - Class: 114
-      Script: {instanceID: 21664}
+      Script: {instanceID: 21198}
     - Class: 114
-      Script: {instanceID: 22406}
+      Script: {instanceID: 21536}
     - Class: 114
-      Script: {instanceID: 22710}
+      Script: {instanceID: 21584}
     - Class: 114
-      Script: {instanceID: 23160}
+      Script: {instanceID: 21690}
     - Class: 114
-      Script: {instanceID: 23258}
+      Script: {instanceID: 22432}
     - Class: 114
-      Script: {instanceID: 23408}
+      Script: {instanceID: 22736}
     - Class: 114
-      Script: {instanceID: 23500}
+      Script: {instanceID: 22848}
     - Class: 114
-      Script: {instanceID: 23848}
+      Script: {instanceID: 23286}
     - Class: 114
-      Script: {instanceID: 23960}
+      Script: {instanceID: 23436}
     - Class: 114
-      Script: {instanceID: 25068}
+      Script: {instanceID: 23528}
     - Class: 114
-      Script: {instanceID: 25214}
+      Script: {instanceID: 23724}
     - Class: 114
-      Script: {instanceID: 25232}
+      Script: {instanceID: 23878}
     - Class: 114
-      Script: {instanceID: 25316}
+      Script: {instanceID: 23990}
+    - Class: 114
+      Script: {instanceID: 24698}
+    - Class: 114
+      Script: {instanceID: 25098}
+    - Class: 114
+      Script: {instanceID: 25244}
+    - Class: 114
+      Script: {instanceID: 25262}
+    - Class: 114
+      Script: {instanceID: 25346}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -324,7 +587,74 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 1839735485
       Script: {instanceID: 0}
-    Assets/Village/Village.unity:
+    Assets/UI Elements/Credits.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 16618}
+    - Class: 114
+      Script: {instanceID: 16678}
+    - Class: 114
+      Script: {instanceID: 18108}
+    - Class: 114
+      Script: {instanceID: 18386}
+    - Class: 114
+      Script: {instanceID: 18780}
+    - Class: 114
+      Script: {instanceID: 19662}
+    - Class: 114
+      Script: {instanceID: 21584}
+    - Class: 114
+      Script: {instanceID: 21690}
+    - Class: 114
+      Script: {instanceID: 22736}
+    - Class: 114
+      Script: {instanceID: 22848}
+    - Class: 114
+      Script: {instanceID: 23724}
+    - Class: 114
+      Script: {instanceID: 23826}
+    - Class: 114
+      Script: {instanceID: 24698}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/UI Elements/Main Menu.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -341,15 +671,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
-    - Class: 58
-      Script: {instanceID: 0}
-    - Class: 60
-      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -360,75 +688,188 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 634}
+      Script: {instanceID: 16618}
     - Class: 114
-      Script: {instanceID: 16612}
+      Script: {instanceID: 16678}
     - Class: 114
-      Script: {instanceID: 16672}
+      Script: {instanceID: 16682}
     - Class: 114
-      Script: {instanceID: 16676}
+      Script: {instanceID: 17496}
     - Class: 114
-      Script: {instanceID: 17124}
+      Script: {instanceID: 17566}
     - Class: 114
-      Script: {instanceID: 17490}
+      Script: {instanceID: 17684}
     - Class: 114
-      Script: {instanceID: 17560}
+      Script: {instanceID: 17902}
     - Class: 114
-      Script: {instanceID: 17678}
+      Script: {instanceID: 18026}
     - Class: 114
-      Script: {instanceID: 17892}
+      Script: {instanceID: 18108}
     - Class: 114
-      Script: {instanceID: 18014}
+      Script: {instanceID: 18200}
     - Class: 114
-      Script: {instanceID: 18096}
+      Script: {instanceID: 18386}
     - Class: 114
-      Script: {instanceID: 18186}
+      Script: {instanceID: 18780}
     - Class: 114
-      Script: {instanceID: 18362}
+      Script: {instanceID: 19130}
     - Class: 114
-      Script: {instanceID: 18370}
+      Script: {instanceID: 19362}
     - Class: 114
-      Script: {instanceID: 18764}
+      Script: {instanceID: 19662}
     - Class: 114
-      Script: {instanceID: 19114}
+      Script: {instanceID: 19888}
     - Class: 114
-      Script: {instanceID: 19344}
+      Script: {instanceID: 19926}
     - Class: 114
-      Script: {instanceID: 19642}
+      Script: {instanceID: 20110}
     - Class: 114
-      Script: {instanceID: 19868}
+      Script: {instanceID: 20112}
     - Class: 114
-      Script: {instanceID: 19974}
+      Script: {instanceID: 20272}
     - Class: 114
-      Script: {instanceID: 20014}
+      Script: {instanceID: 20634}
     - Class: 114
-      Script: {instanceID: 20088}
+      Script: {instanceID: 20976}
     - Class: 114
-      Script: {instanceID: 20090}
+      Script: {instanceID: 21536}
     - Class: 114
-      Script: {instanceID: 20250}
+      Script: {instanceID: 21584}
     - Class: 114
-      Script: {instanceID: 20612}
+      Script: {instanceID: 21690}
     - Class: 114
-      Script: {instanceID: 21510}
+      Script: {instanceID: 22432}
     - Class: 114
-      Script: {instanceID: 21558}
+      Script: {instanceID: 22736}
     - Class: 114
-      Script: {instanceID: 21664}
+      Script: {instanceID: 22848}
     - Class: 114
-      Script: {instanceID: 22406}
+      Script: {instanceID: 23724}
     - Class: 114
-      Script: {instanceID: 22710}
+      Script: {instanceID: 24698}
     - Class: 114
-      Script: {instanceID: 23696}
+      Script: {instanceID: 25098}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Village/Village.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 84
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 23944}
+      Script: {instanceID: 638}
     - Class: 114
-      Script: {instanceID: 24530}
+      Script: {instanceID: 16618}
     - Class: 114
-      Script: {instanceID: 24668}
+      Script: {instanceID: 16678}
     - Class: 114
-      Script: {instanceID: 25068}
+      Script: {instanceID: 16682}
+    - Class: 114
+      Script: {instanceID: 17130}
+    - Class: 114
+      Script: {instanceID: 17566}
+    - Class: 114
+      Script: {instanceID: 17684}
+    - Class: 114
+      Script: {instanceID: 17852}
+    - Class: 114
+      Script: {instanceID: 17902}
+    - Class: 114
+      Script: {instanceID: 18026}
+    - Class: 114
+      Script: {instanceID: 18108}
+    - Class: 114
+      Script: {instanceID: 18200}
+    - Class: 114
+      Script: {instanceID: 18376}
+    - Class: 114
+      Script: {instanceID: 18386}
+    - Class: 114
+      Script: {instanceID: 18780}
+    - Class: 114
+      Script: {instanceID: 19130}
+    - Class: 114
+      Script: {instanceID: 19362}
+    - Class: 114
+      Script: {instanceID: 19662}
+    - Class: 114
+      Script: {instanceID: 19888}
+    - Class: 114
+      Script: {instanceID: 19926}
+    - Class: 114
+      Script: {instanceID: 19996}
+    - Class: 114
+      Script: {instanceID: 20036}
+    - Class: 114
+      Script: {instanceID: 20112}
+    - Class: 114
+      Script: {instanceID: 21536}
+    - Class: 114
+      Script: {instanceID: 21584}
+    - Class: 114
+      Script: {instanceID: 21690}
+    - Class: 114
+      Script: {instanceID: 22432}
+    - Class: 114
+      Script: {instanceID: 22736}
+    - Class: 114
+      Script: {instanceID: 22848}
+    - Class: 114
+      Script: {instanceID: 23724}
+    - Class: 114
+      Script: {instanceID: 23974}
+    - Class: 114
+      Script: {instanceID: 24560}
+    - Class: 114
+      Script: {instanceID: 24698}
+    - Class: 114
+      Script: {instanceID: 25098}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -686,6 +1127,12 @@ ScriptsOnlyBuild:
     className: SkeletonAsset
   - hash:
       serializedVersion: 2
+      Hash: 2e0eec3afcd95b24fe453aeb1885aee1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Dialogue
+  - hash:
+      serializedVersion: 2
       Hash: db3cfb76ef74096d198241f72daad15e
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -776,7 +1223,7 @@ ScriptsOnlyBuild:
     className: RuleOverrideTile
   - hash:
       serializedVersion: 2
-      Hash: 549d20aa528e367ad65476d36f36b8ee
+      Hash: 9efc3a8c8e27116049d8395721beff8a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: RoomBehaviour
@@ -794,7 +1241,13 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: 27bfd242d50f2a01e92087715cce7dae
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: start
+  - hash:
+      serializedVersion: 2
+      Hash: feb7ac62f42644208805a001c268dc47
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Shop
@@ -1136,6 +1589,12 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
+      Hash: 9b325bb0f12407662892492cc584834d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BindingMenu
+  - hash:
+      serializedVersion: 2
       Hash: 3863be62e6053100d56a0ccfe045d67e
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -1160,7 +1619,7 @@ ScriptsOnlyBuild:
     className: Signs
   - hash:
       serializedVersion: 2
-      Hash: 71668efd4d92a44ca6246fb490c3a8b4
+      Hash: 6d3e293f8a426dd0d8a331c6ce02adbb
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Teleporter
@@ -1190,7 +1649,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: cbb931446ab113e92579873c94776a96
+      Hash: 90bc52cd55d14461be23b59c468c848f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Health
@@ -1364,10 +1823,22 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
+      Hash: b0c4b6f97092c72acea074f451a359a5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Notes
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.2D.Animation.Runtime
     namespaceName: UnityEngine.U2D.Animation
     className: BufferManager
+  - hash:
+      serializedVersion: 2
+      Hash: c368ec8a981b2d7620774a95bcdf21a3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MainMenu
   - hash:
       serializedVersion: 2
       Hash: e3495ba6e916f016d307c32d6fe5ac9a
@@ -1520,7 +1991,7 @@ ScriptsOnlyBuild:
     className: CCDSolver2D
   - hash:
       serializedVersion: 2
-      Hash: 4ddf8aeff53fb4d7f652783f338671a2
+      Hash: dcd3be025c31f42e4ea5e63772fdfc26
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: RPlayer
@@ -1718,6 +2189,12 @@ ScriptsOnlyBuild:
     className: Enemy
   - hash:
       serializedVersion: 2
+      Hash: 3ca70a97aabd585c3f5e199168d5638e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AudioManager
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1890,6 +2367,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Credits
   - hash:
       serializedVersion: 2
       Hash: 231706ff38c5589a3903623fa8da9a80
@@ -2324,6 +2807,8 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
+  - Assets/UI Elements/Main Menu.unity
+  - Assets/UI Elements/Credits.unity
   - Assets/Village/Village.unity
   - Assets/Scenes/Diff Player.unity
-  playerPath: C:/Users/Rigg Dev/Desktop/New folder/Dungeon Quest.exe
+  playerPath: C:/Users/Rigg Dev/Desktop/Build/Dungeon Diver.exe

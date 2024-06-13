@@ -18,7 +18,6 @@ public class Follower : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spriteRenderer;
     public GameObject Drop;
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -77,12 +76,14 @@ public class Follower : MonoBehaviour
     }
     public void Die()
     {
+        FindObjectOfType<AudioManager>().Play("EnemyDie");
         gameObject.transform.parent.gameObject.GetComponent<RoomBehaviour>().Dead();
         Instantiate(Drop,transform.position,Quaternion.identity);
         Destroy(gameObject);
     }
     public void Attack()
     {
+        FindObjectOfType<AudioManager>().Play("BatBite");
         if (!spriteRenderer.flipX)
         {
             swordColliderRight.enabled = true;
@@ -91,7 +92,6 @@ public class Follower : MonoBehaviour
         {
             swordColliderLeft.enabled = true;
         }
-
     }
     public void AttackFinish()
     {

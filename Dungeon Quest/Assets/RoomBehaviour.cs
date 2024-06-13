@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoomBehaviour : MonoBehaviour
 {
     public GameObject doors;
-    public bool activateEnemy = false;
+    private bool activateEnemy = true;
     private int enemyCount;
     public GameObject[] Enemy;
     // Start is called before the first frame update
@@ -22,16 +22,18 @@ public class RoomBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && enemyCount != 0) 
         {
+            FindObjectOfType<AudioManager>().Play("WallSlide");
             doors.SetActive(true);
-            activateEnemy = true;
             MakeEnemyActive();
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     { 
-        if(enemyCount == 0)
+        if(enemyCount == 0 && !activateEnemy)
         {
+            FindObjectOfType<AudioManager>().Play("WallSlide");
             doors.SetActive(false);
+            Destroy(gameObject);
         }
         
     }
@@ -42,9 +44,13 @@ public class RoomBehaviour : MonoBehaviour
     }
     public void MakeEnemyActive()
     {
-        foreach (GameObject go in Enemy)
+        if (activateEnemy)
         {
-            go.SetActive(true);
+            foreach (GameObject go in Enemy)
+            {
+                go.SetActive(true);
+            }
+            activateEnemy = false;
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,7 +10,7 @@ public class Health : MonoBehaviour
     private Coroutine Rumble;
     Animator animator;
     public int maxHealth = 10;
-    public int Armour = 0;
+    public float Armour = 0;
 
     //[SerializeField] private GameObject bloodParticle;
     public float currentHealth;
@@ -17,14 +18,15 @@ public class Health : MonoBehaviour
     //[SerializeField] private Renderer renderer;
     //[SerializeField] private float flashTime = 0.2f;
 
+ 
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
     private void Start()
     {
-        //currentHealth.Value = 1;
-        currentHealth = maxHealth;
+        //currentHealth.Value = 1;        currentHealth = maxHealth;
+
     }
 
     #region Part from complex video
@@ -67,11 +69,16 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        currentHealth = currentHealth - (int)(amount - (float)(amount*(Armour/100)));
-        RumblePulse(.5f, .5f, 1f);
+        if(currentHealth<=0)
+        { return; }
+        FindObjectOfType<AudioManager>().Play("PlayerHurt");
+        currentHealth = currentHealth - (int)((float)amount - ((float)amount*(Armour/100)));
+        Debug.Log(currentHealth);
+        RumblePulse(1f, 1f, 0.5f);
         if (currentHealth <= 0)
         {
-            //dead
+            if(!FindObjectOfType<AudioManager>().isPlay("PlayerDeath"))
+                FindObjectOfType<AudioManager>().Play("PlayerDeath");
             gameObject.GetComponent<RPlayer>().LockMovement();
             animator.SetBool("isDead", true);
             Time.timeScale = .25f;
@@ -81,7 +88,7 @@ public class Health : MonoBehaviour
     public void Increasehealth(int amount)
     {
         currentHealth += amount;
-        if(currentHealth >= maxHealth)
+        if(currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
@@ -104,6 +111,15 @@ public class Health : MonoBehaviour
             yield return null;
         }
         pad.SetMotorSpeeds(0, 0);
+    }
+    public void StopRumbleNow()
+    { 
+        pad = Gamepad.current;
+        if (pad == null)
+        {
+            return;
+        }
+        pad.SetMotorSpeeds(0,0);
     }
 }
 

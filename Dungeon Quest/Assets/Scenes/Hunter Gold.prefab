@@ -35,8 +35,8 @@ Transform:
 --- !u!1 &7967951217992321432
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5064192924999740944, guid: c6e77871b35651546913101bf31c9ed8, type: 3}
-  m_PrefabInstance: {fileID: 6853823521106575446}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -55,8 +55,8 @@ GameObject:
 --- !u!4 &7487853887407677574
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6618398822272286337, guid: c6e77871b35651546913101bf31c9ed8, type: 3}
-  m_PrefabInstance: {fileID: 6853823521106575446}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967951217992321432}
   serializedVersion: 2
@@ -70,8 +70,8 @@ Transform:
 --- !u!212 &4638346409008363745
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4926616383781239434, guid: c6e77871b35651546913101bf31c9ed8, type: 3}
-  m_PrefabInstance: {fileID: 6853823521106575446}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967951217992321432}
   m_Enabled: 1
@@ -123,8 +123,8 @@ SpriteRenderer:
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4223124457785274293, guid: c6e77871b35651546913101bf31c9ed8, type: 3}
-  m_PrefabInstance: {fileID: 6853823521106575446}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967951217992321432}
   m_Enabled: 1
@@ -143,8 +143,8 @@ Animator:
 --- !u!60 &7403951093659468675
 PolygonCollider2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1025024628815533855, guid: c6e77871b35651546913101bf31c9ed8, type: 3}
-  m_PrefabInstance: {fileID: 6853823521106575446}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967951217992321432}
   m_Enabled: 1
@@ -196,8 +196,8 @@ PolygonCollider2D:
 --- !u!114 &7962176733401696000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8107712539967228859, guid: c6e77871b35651546913101bf31c9ed8, type: 3}
-  m_PrefabInstance: {fileID: 6853823521106575446}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967951217992321432}
   m_Enabled: 1
@@ -205,61 +205,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dc73db6c6896f429381592b2f47d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 15
---- !u!1001 &6853823521106575446
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7167068865353739295}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Name
-      value: Hunter Gold
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 0}
+  gold: 50

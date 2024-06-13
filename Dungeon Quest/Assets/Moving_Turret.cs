@@ -29,10 +29,7 @@ public class Moving_Turret : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -82,7 +79,7 @@ public class Moving_Turret : MonoBehaviour
         dis.y = Mathf.Abs(transform.position.y - target.position.y);
         if(dis.x<dis.y)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x,transform.position.y,transform.position.z), speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, transform.position.y, transform.position.z), speed * Time.deltaTime);
         }
         else
         {
@@ -92,6 +89,7 @@ public class Moving_Turret : MonoBehaviour
     }
     void Shoot()
     {
+        FindObjectOfType<AudioManager>().Play("MushroomEnergyBall");
         GameObject bull = Instantiate(Bullet, transform.position, Quaternion.identity);
         bull.GetComponent<Bullet>().Init(tar);
         shootavail=true;
@@ -99,6 +97,7 @@ public class Moving_Turret : MonoBehaviour
     }
     public void Die()
     {
+        FindObjectOfType<AudioManager>().Play("EnemyDie");
         gameObject.transform.parent.gameObject.GetComponent<RoomBehaviour>().Dead();
         Instantiate(Drop, transform.position, Quaternion.identity);
         Destroy(gameObject);

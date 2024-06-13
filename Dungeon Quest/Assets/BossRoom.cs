@@ -9,7 +9,7 @@ public class BossRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<AudioManager>().Play("Theme");
     }
 
     // Update is called once per frame
@@ -21,8 +21,11 @@ public class BossRoom : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("WallSlide");
             doors.SetActive(true);
             Enemy.SetActive(true);
+            FindObjectOfType<AudioManager>().Stop("Theme");
+            FindObjectOfType<AudioManager>().Play("BossTheme");
         }
     }
 }

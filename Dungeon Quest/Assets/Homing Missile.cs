@@ -24,12 +24,6 @@ public class HomingMissile : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -76,12 +70,14 @@ public class HomingMissile : MonoBehaviour
     }
     void Shoot()
     {
+        FindObjectOfType<AudioManager>().Play("WizardFireBall");
         Instantiate(Bullet, transform.position, Quaternion.identity);
         shootavail = true;
         anim.SetBool("WizardAttack",false);
     }
     public void Die()
     {
+        FindObjectOfType<AudioManager>().Play("EnemyDie");
         gameObject.transform.parent.gameObject.GetComponent<RoomBehaviour>().Dead();
         Instantiate(Drop, transform.position, Quaternion.identity);
         Destroy(gameObject);
